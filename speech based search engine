@@ -1,0 +1,50 @@
+# Speech-Based Search Engine
+
+This project is a simple voice-activated web search tool built using Python. It allows users to speak their search queries, recognizes the speech, and opens the relevant Google search results in a web browser.
+
+## Features
+
+* Voice-based user input
+* Speech-to-text using Google Web Speech API
+* Text-to-speech feedback
+* Automatic web search via the default browser
+
+## Requirements
+
+Install the necessary Python packages before running:
+
+```bash
+pip install SpeechRecognition pyttsx3 pyaudio
+```
+
+> **Note:** `pyaudio` can be tricky to install. You may need platform-specific steps or precompiled binaries.
+
+## How It Works
+
+1. The program uses `pyttsx3` to prompt the user to speak.
+2. It listens through the microphone using `speech_recognition`.
+3. Converts the spoken words into text.
+4. Opens a Google search for the recognized query using `webbrowser`.
+
+## Usage
+
+Run the script with:
+
+```bash
+python speech\ based\ search\ engine.py
+```
+
+Speak clearly when prompted. The script will search for the spoken query on Google.
+
+## File Overview
+
+* `take_command()` – Captures audio and converts it to text.
+* `speak(text)` – Uses text-to-speech to provide audio feedback.
+* `search_web(query)` – Opens a Google search for the query in the browser.
+* `main` block – Controls the flow: takes input and performs the search.
+
+## Limitations
+
+* Requires a stable internet connection for speech recognition.
+* Accuracy depends on microphone quality and ambient noise.
+* Only supports English voice input by default.
